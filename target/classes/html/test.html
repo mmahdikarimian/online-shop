@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <ul id="list">
+
+    </ul>
+</div>
+</body>
+<script>
+    console.log('hello')
+    apiAddress = 'http://localhost:8080/product/getall'
+    fetch(apiAddress)
+        .then(response => {
+            if (response.ok) {
+                return response.json(); // Parse the response data as JSON
+            } else {
+                throw new Error('API request failed');
+            }
+        })
+        .then(data => {
+            // Process the response data here
+            console.log(data); // Example: Logging the data to the console
+            for (let i = 0; i < data.length; i++) {
+                document.getElementById("list").append("<li>"+data[i].id)+"</li>";
+                console.log(data)
+            }
+
+        })
+        .catch(error => {
+            // Handle any errors here
+            console.error(error); // Example: Logging the error to the console
+        });
+</script>
+</html>
+

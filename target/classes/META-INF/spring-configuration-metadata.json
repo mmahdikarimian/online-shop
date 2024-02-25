@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "rsa",
+      "type": "ir.vanosheeh.onlineshop.config.RsaKeyProperties",
+      "sourceType": "ir.vanosheeh.onlineshop.config.RsaKeyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rsa.private-key",
+      "type": "java.security.interfaces.RSAPrivateKey",
+      "sourceType": "ir.vanosheeh.onlineshop.config.RsaKeyProperties"
+    },
+    {
+      "name": "rsa.public-key",
+      "type": "java.security.interfaces.RSAPublicKey",
+      "sourceType": "ir.vanosheeh.onlineshop.config.RsaKeyProperties"
+    }
+  ],
+  "hints": []
+}
